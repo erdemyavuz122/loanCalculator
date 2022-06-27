@@ -1,0 +1,23 @@
+
+package com.mycompany.loancalculator;
+
+
+public class Loan {
+    double interest;
+    int year;
+    double loanAmount;
+    
+    public Loan(double interest, int year, double loanAmount) {
+        this.interest=interest;
+        this.year=year;
+        this.loanAmount=loanAmount;
+    }
+    public double getTotalPayment(){
+    double total;
+    total = ((loanAmount*interest)/100)+loanAmount;
+    return total;
+}
+    public double getMonthlyPayment(){
+    return ((loanAmount*interest)+loanAmount)/(year*12);
+    }
+   }
